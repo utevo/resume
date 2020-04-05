@@ -73,14 +73,14 @@
           <span>Work</span>
         </div>
         <div class="section-content">
-          <a v-for="(work, index) of person.works"
+          <a v-for="(experience, index) of person.experiences"
             :key="index"
             class="section-item"
-            :href="work.website">
-            <span class="section-item-header"> {{ work.position }} </span>
-            <span class="section-item-subheader"> {{ work.company }} </span>
-            <span class="section-item-text"> {{ work.timeperoid }} </span>
-            <span class="section-item-text-light"> {{ work.description }} </span>
+            :href="experience.website">
+            <span class="section-item-header"> {{ experience.position }} </span>
+            <span class="section-item-subheader"> {{ experience.company }} </span>
+            <span class="section-item-text"> {{ experience.timeperoid }} </span>
+            <span class="section-item-text-light"> {{ experience.description }} </span>
           </a>
         </div>
       </div>
@@ -91,15 +91,15 @@
           <span>Education</span>
         </div>
         <div class="section-content">
-          <a v-for="(school, index) of person.schools"
+          <a v-for="(education, index) of person.educations"
             :key="index"
             class="section-item"
-            :href="school.website">
-            <span class="section-item-header"> {{ school.name }} </span>
-            <span class="section-item-subheader"> {{ school.degree }} </span>
-            <span class="section-item-text"> {{ school.timeperoid }} </span>
-            <span class="section-item-text-light"> Specialization: {{ school.specialization }} </span>
-            <span class="section-item-text-light"> GPA: {{ school.gpa }} </span>
+            :href="education.website">
+            <span class="section-item-header"> {{ education.degree }} </span>
+            <span class="section-item-subheader"> {{ education.school }} </span>
+            <span class="section-item-text"> {{ education.timeperoid }} </span>
+            <span class="section-item-text-light"> Specialization: {{ education.specialization }} </span>
+            <span class="section-item-text-light"> GPA: {{ education.gpa }} </span>
           </a>
         </div>
       </div>

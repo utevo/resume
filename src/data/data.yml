@@ -26,7 +26,7 @@ birth:
   location: Warsaw
 
 
-works:
+experiences:
 - company: CodiLime
   position: Software Developer
   timeperiod: December 2019 - Current
@@ -38,8 +38,9 @@ works:
   description: Programming works in projects implemented for the needs of the telecommunications sector.
 
 
-schools:
+educations:
 - degree: Bachelor of Computer Science
+  school: The Faculty of Electronics and Information Technology on Warsaw University of Technology
   timeperiod: October 2017 - Current
   specialization: Computer Information System Engineering
   gpa: 3.54
