@@ -67,20 +67,20 @@
     <div class="left-column-bg"></div>
 
     <div class="right-column">
-      <div class="section experiences-section">
+      <div class="section experience-section">
         <div class="section-headline">
           <i class="material-icons small-icon">work</i>
           <span>Work</span>
         </div>
         <div class="section-content">
-          <a v-for="(experience, index) of person.experiences"
+          <a v-for="(work, index) of person.works"
             :key="index"
             class="section-item"
-            :href="experience.website">
-            <span class="section-item-header"> {{ experience.position }} </span>
-            <span class="section-item-subheader"> {{ experience.company }} </span>
-            <span class="section-item-text"> {{ experience.timeperoid }} </span>
-            <span class="section-item-text-light"> {{ experience.description }} </span>
+            :href="work.website">
+            <span class="section-item-header"> {{ work.position }} </span>
+            <span class="section-item-subheader"> {{ work.company }} </span>
+            <span class="section-item-text"> {{ work.timeperoid }} </span>
+            <span class="section-item-text-light"> {{ work.description }} </span>
           </a>
         </div>
       </div>
