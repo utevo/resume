@@ -45,7 +45,7 @@
         >
           <i v-if="skill.iconClass" :class="'container-icon skill-icon ' + skill.iconClass"></i>
           <i v-if="skill.materialIcon" class="container-icon skill-icon material-icons">{{ skill.materialIcon }}</i>
-          <span class="block-marged txt-full-white">{{ skill.name }}</span>
+          <span class="block-marged">{{ skill.name }}</span>
         </a>
       </div>
 
@@ -59,7 +59,7 @@
         >
           <i v-if="hobby.iconClass" :class="'container-icon hobby-icon ' + hobby.iconClass"></i>
           <i v-if="hobby.materialIcon" class="container-icon hobby-icon material-icons">{{ hobby.materialIcon }}</i>
-          <span class="block-marged txt-full-white">{{ hobby.name }}</span>
+          <span class="block-marged">{{ hobby.name }}</span>
         </a>
       </div>
     </div>
@@ -223,7 +223,7 @@ a {
 
   color:rgba(255,255,255,0.59);
   background-color: @main-color;
-  overflow: hiden;
+  overflow: hidden;
   z-index: 2;
 
   opacity: 100%;  
@@ -255,5 +255,39 @@ a {
 
   height: 100%;
   width: 65%;
+}
+
+.external-link {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.block-marged {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.multi-line-text {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.contact-container {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.txt-full-white {
+  color: white;
+}
+
+.headline {
+  color: white;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
 </style>
