@@ -168,6 +168,17 @@ export default Vue.component(name, importData());
 
 @main-color: #A800FA;
 
+
+a {
+  color: inherit;
+  cursor: pointer;
+  text-decoration-line: none;
+
+  &:visited {
+    color: inherit;
+  }
+};
+
 .resume {
   display: flex;
   position: relative;
