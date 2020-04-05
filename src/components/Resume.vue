@@ -17,7 +17,36 @@
 
       <div class="txt-multiline">{{ person.about }}</div>
 
-      <div class="txt-multiline">{{ person.about }}</div>
+      <div class="txt-multiline">{{ person.knowledge }}</div>
+    </div>
+
+    <div class="contact-container">
+      <a v-if="person.contact.email"
+        :href="contactLinks.email"
+        class="external-link">
+        <i class="contact-icon material-icons">mail</i>
+        <span class="block-marged txt-full-white">
+          {{ person.contact.email }}
+        </span>
+      </a>
+
+      <a v-if="person.contact.phone"
+        :href="contactLinks.phone"
+        class="external-link">
+        <i class="contact-icon material-icon">mail</i>
+        <span class="block-marged txt-full-white">
+          {{ person.contact.phone }}
+        </span>
+      </a>
+
+      <a v-if="person.contact.github"
+        :href="contactLinks.github"
+        class="external-link">
+        <i class="contact-icon fa fa-github"></i>
+        <span class="block-marged txt-full-white">
+          {{ person.contact.github }}
+        </span>
+      </a>
     </div>
 
   </div>
