@@ -73,14 +73,16 @@
           <span>Work</span>
         </div>
         <div class="section-content">
-          <a v-for="(experience, index) of person.experiences"
+          <a
+            v-for="(experience, index) of person.experiences"
             :key="index"
             class="section-item"
-            :href="experience.website">
-            <span class="section-item-header"> {{ experience.position }} </span>
-            <span class="section-item-subheader"> {{ experience.company }} </span>
-            <span class="section-item-text"> {{ experience.timeperoid }} </span>
-            <span class="section-item-text-light"> {{ experience.description }} </span>
+            :href="experience.website"
+          >
+            <span class="section-item-header">{{ experience.position }}</span>
+            <span class="section-item-subheader">{{ experience.company }}</span>
+            <span class="section-item-text">{{ experience.timeperoid }}</span>
+            <span class="section-item-text-light">{{ experience.description }}</span>
           </a>
         </div>
       </div>
@@ -91,15 +93,17 @@
           <span>Education</span>
         </div>
         <div class="section-content">
-          <a v-for="(education, index) of person.educations"
+          <a
+            v-for="(education, index) of person.educations"
             :key="index"
             class="section-item"
-            :href="education.website">
-            <span class="section-item-header"> {{ education.degree }} </span>
-            <span class="section-item-subheader"> {{ education.school }} </span>
-            <span class="section-item-text"> {{ education.timeperoid }} </span>
-            <span class="section-item-text-light"> Specialization: {{ education.specialization }} </span>
-            <span class="section-item-text-light"> GPA: {{ education.gpa }} </span>
+            :href="education.website"
+          >
+            <span class="section-item-header">{{ education.degree }}</span>
+            <span class="section-item-subheader">{{ education.school }}</span>
+            <span class="section-item-text">{{ education.timeperoid }}</span>
+            <span class="section-item-text-light">Specialization: {{ education.specialization }}</span>
+            <span class="section-item-text-light">GPA: {{ education.gpa }}</span>
           </a>
         </div>
       </div>
@@ -110,14 +114,16 @@
           <span>Projects</span>
         </div>
         <div class="section-content">
-          <a v-for="(project, index) of person.projects"
+          <a
+            v-for="(project, index) of person.projects"
             :key="index"
             class="section-item"
-            :href="project.website">
-            <span class="section-item-header"> {{ project.name }} </span>
-            <span class="section-item-subheader"> {{ project.skills }} </span>
-            <span class="section-item-text"> {{ project.description }} </span>
-            <span class="section-item-text-light"> {{ project.url }} </span>
+            :href="project.website"
+          >
+            <span class="section-item-header">{{ project.name }}</span>
+            <span class="section-item-subheader">{{ project.skills }}</span>
+            <span class="section-item-text">{{ project.description }}</span>
+            <span class="section-item-text-light">{{ project.url }}</span>
           </a>
         </div>
       </div>
@@ -128,14 +134,16 @@
           <span>Contributions</span>
         </div>
         <div class="section-content">
-          <a v-for="(contribution, index) of person.contributions"
+          <a
+            v-for="(contribution, index) of person.contributions"
             :key="index"
             class="section-item"
-            :href="contribution.url">
-            <span class="section-item-header"> {{ contribution.name }} </span>
-            <span class="section-item-subheader"> {{ contribution.skills }} </span>
-            <span class="section-item-text"> {{ contribution.description }} </span>
-            <span class="section-item-text-light"> {{ contribution.url }} </span>
+            :href="contribution.url"
+          >
+            <span class="section-item-header">{{ contribution.name }}</span>
+            <span class="section-item-subheader">{{ contribution.skills }}</span>
+            <span class="section-item-text">{{ contribution.description }}</span>
+            <span class="section-item-text-light">{{ contribution.url }}</span>
           </a>
         </div>
       </div>
@@ -154,9 +162,9 @@ export default Vue.component(name, importData());
 
 <style>
 /* Add new fonts here */
-@import '../../node_modules/font-awesome/css/font-awesome.css';
-@import '../../node_modules/material-design-icons/iconfont/material-icons.css';
-@import '../../node_modules/devicons/css/devicons.css';
+@import "../../node_modules/font-awesome/css/font-awesome.css";
+@import "../../node_modules/material-design-icons/iconfont/material-icons.css";
+@import "../../node_modules/devicons/css/devicons.css";
 
 h3 {
   margin: 40px 0 0;
