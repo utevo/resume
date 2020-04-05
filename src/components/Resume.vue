@@ -179,6 +179,16 @@ a {
   }
 };
 
+.material-icons {
+  color: @main-color;
+  position: relative;
+}
+
+.fa {
+  color: @main-color;
+  position: relative;
+}
+
 .resume {
   display: flex;
   position: relative;
