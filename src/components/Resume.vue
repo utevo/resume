@@ -84,6 +84,25 @@
           </a>
         </div>
       </div>
+
+      <div class="section education-section">
+        <div class="section-headline">
+          <i class="material-icons small-icon">school</i>
+          <span>Education</span>
+        </div>
+        <div class="section-content">
+          <a v-for="(school, index) of person.education"
+            :key="index"
+            class="section-item"
+            :href="school.website">
+            <span class="section-item-header"> {{ school.name }} </span>
+            <span class="section-item-subheader"> {{ school.degree }} </span>
+            <span class="section-item-text"> {{ school.timeperoid }} </span>
+            <span class="section-item-text-light"> Specialization: {{ school.specialization }} </span>
+            <span class="section-item-text-light"> GPA: {{ school.gpa }} </span>
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </template>
