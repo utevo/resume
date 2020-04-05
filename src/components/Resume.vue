@@ -1,21 +1,33 @@
 <template>
   <div class="resume">
-      <div class="left-column">
-          <div>
-              <div class="headline">
-                  <span> {{ person.name.first }} {{ person.name.middle }} </span>
-                  <span class="uppercase"> {{ person.name.last }} </span>
-              </div>
-          </div>
+    <div class="left-column">
+
+      <div class="headline">
+        <div class="headline-name">
+          <span>{{ person.name.first }} {{ person.name.middle }}</span>
+          <span class="uppercase">{{ person.name.last }}</span>
+        </div>
+
+        <p>
+          <span class="txt-full-white">{{ person.position }}</span>
+          <br />
+          <span class="uppercase">{{ person.contact.city }}, {{ person.contact.country }}</span>
+        </p>
       </div>
+
+      <div class="txt-multiline">{{ person.about }}</div>
+
+      <div class="txt-multiline">{{ person.about }}</div>
+    </div>
+
   </div>
 </template>
 
 <script>
-import Vue from 'vue';
-import { importData } from '../data/data.js';
+import Vue from "vue";
+import { importData } from "../data/data.js";
 
-const name = 'Resume';
+const name = "Resume";
 export default Vue.component(name, importData());
 </script>
 
