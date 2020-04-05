@@ -1,0 +1,104 @@
+/* #*/ export const PERSON = `
+name:
+  first: Michał
+  middle:
+  last: Kowieski
+about: Hi, my name is John Doe. I"m just about the most boring type of person you could
+       possibly imagine. I like collecting leaves from the tree in my back yard and documenting
+       each time I eat a peanut that is non-uniform. I am not a robot. Please hire me.
+position: Software Developer
+
+birth:
+  year: 1998
+  location: Warsaw
+
+experience:
+- company: CodiLime
+  position: Software Developer
+  timeperiod: December 2019 - Current
+  description: New features development and maintenance of SDN related product.
+
+
+- company: Accenture
+  position: Intern in IT area
+  timeperiod: July 2019 - October 2019
+  description: Programming works in projects implemented for the needs of the telecommunications sector.
+
+
+education:
+- degree: Bachelor of Computer Science
+  timeperiod: October 2017 - Current
+  specialization: Computer Information System Engineering
+  gpa: 3.54
+
+# skill level goes 0 to 100
+skills:
+- name: Python
+  level: 100
+  iconClass: devicons devicons-python
+- name: Django Rest Framework
+  level: 100
+  iconClass: devicons devicons-django
+- name: JavaScript
+  level: 100
+  iconClass: devicons devicons-javascript_badge
+- name: React
+  level: 100
+  iconClass: devicons devicons-react
+- name: Go
+  level: 100
+  iconClass: devicons devicons-go
+- name: Docker
+  level: 100
+  iconClass: devicons devicons-docker
+- name: PostgreSQL
+  level: 100
+  iconClass: devicons devicons-postgresql
+- name: Travis CI
+  level: 100
+  iconClass: devicons devicons-travis
+  
+knowledge: Also proficient in Adobe Photoshop and Illustrator, grew up bilingual
+  (English and Klingon).
+
+projects:
+- name: eCookbook
+  skills: Python | Django | React | Docker | Travis CI
+  description: 🍳 An interactive cookbook powered by Django and React.
+  url: https://github.com/utevo/eCookbook
+
+- name: gRPC-Chat
+  skills: Go | gRPC
+  description: 💬 A chat server/client application implemented using gRPC.
+  url: https://github.com/utevo/gRPC-Chat
+
+- name: Rolodex
+  skills: React
+  description: 📇 Rolodex as Single Page Application written in React.
+  url: https://github.com/utevo/Rolodex
+
+hobbies:
+- name: Travels
+  materialIcon: explore
+
+- name: Electronic Music
+  iconClass: fa fa-music
+
+- name: Sport
+  materialIcon: directions_run
+
+
+contributions:
+- name: networking-opencontrail
+  description: 🔌 The plugin integrates Tungsten Fabric with OpenStack.
+  url: https://review.opendev.org/#/q/project:x/networking-opencontrail
+
+contact:
+  email: michael.kowieski@gmail.com
+  phone: 720 798 271
+  city: Warsaw
+  country: Poland
+  github: utevo
+# en, de, fr, pt, ca, cn, it, es, th, pt-br, ru, sv, id, hu, pl, ja, ka, nl, he, zh-tw, lt, ko, el, nb-no
+lang: en
+`
