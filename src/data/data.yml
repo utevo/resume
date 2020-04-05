@@ -7,32 +7,18 @@ name:
 position: Software Developer
 
 
-about: Hi, my name is John Doe. I"m just about the most boring type of person you could
-       possibly imagine. I like collecting leaves from the tree in my back yard and documenting
-       each time I eat a peanut that is non-uniform. I am not a robot. Please hire me.
-
-
 contact:
   email: michael.kowieski@gmail.com
   phone: 720 798 271
   city: Warsaw
   country: Poland
   github: utevo
-
 
 
 about: Hi, my name is Michał Kowieski. I am not a robot. Please hire me.
 
 
 knowledge: Also proficient.
-
-
-contact:
-  email: michael.kowieski@gmail.com
-  phone: 720 798 271
-  city: Warsaw
-  country: Poland
-  github: utevo
 
 
 birth:
@@ -85,10 +71,6 @@ skills:
 - name: Travis CI
   level: 100
   iconClass: devicons devicons-travis
-  
-
-knowledge: Also proficient in Adobe Photoshop and Illustrator, grew up bilingual
-  (English and Klingon).
 
 
 projects:
