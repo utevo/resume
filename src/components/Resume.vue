@@ -1,18 +1,25 @@
 <template>
   <div class="resume">
+      <div class="left-column">
+          <div>
+              <div class="headline">
+                  <span> {{ person.name.first }} {{ person.name.middle }} </span>
+                  <span class="uppercase"> {{ person.name.last }} </span>
+              </div>
+          </div>
+      </div>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'Resume',
-  props: {
-    person: Object
-  }
-}
+import Vue from 'vue';
+import { importData } from '../data/data.js';
+
+const name = 'Resume';
+export default Vue.component(name, importData());
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+
 <style scoped>
 h3 {
   margin: 40px 0 0;
