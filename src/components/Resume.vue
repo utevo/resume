@@ -91,7 +91,7 @@
           <span>Education</span>
         </div>
         <div class="section-content">
-          <a v-for="(school, index) of person.education"
+          <a v-for="(school, index) of person.schools"
             :key="index"
             class="section-item"
             :href="school.website">
