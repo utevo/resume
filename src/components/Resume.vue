@@ -103,6 +103,24 @@
           </a>
         </div>
       </div>
+
+      <div class="section projects-section">
+        <div class="section-headline">
+          <i class="material-icons small-icon">code</i>
+          <span>Projects</span>
+        </div>
+        <div class="section-content">
+          <a v-for="(project, index) of person.projects"
+            :key="index"
+            class="section-item"
+            :href="project.website">
+            <span class="section-item-header"> {{ project.name }} </span>
+            <span class="section-item-subheader"> {{ project.skills }} </span>
+            <span class="section-item-text"> {{ project.description }} </span>
+            <span class="section-item-text-light"> {{ project.url }} </span>
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </template>
