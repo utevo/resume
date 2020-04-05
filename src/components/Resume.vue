@@ -63,6 +63,28 @@
         </a>
       </div>
     </div>
+
+    <div class="left-column-bg"></div>
+
+    <div class="right-column">
+      <div class="section experiences-section">
+        <div class="section-headline">
+          <i class="material-icons small-icon">work</i>
+          <span>Work</span>
+        </div>
+        <div class="section-content">
+          <a v-for="(experience, index) of person.experiences"
+            :key="index"
+            class="section-item"
+            :href="experience.website">
+            <span class="section-item-header"> {{ experience.position }} </span>
+            <span class="section-item-subheader"> {{ experience.company }} </span>
+            <span class="section-item-text"> {{ experience.timeperoid }} </span>
+            <span class="section-item-text-light"> {{ experience.description }} </span>
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
