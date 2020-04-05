@@ -55,13 +55,25 @@
         class="skill-item"
         :href="skill.url">
         <i v-if="skill.iconClass" :class="'skill-icon' + skill.iconClass"></i>
-        <i v-if="skill.materialIcon" class="skill-icon material-icon">skill.materialIcon</i>
+        <i v-if="skill.materialIcon" class="skill-icon material-icon"> {{ skill.materialIcon }} </i>
         <span class="block-marged txt-full-white">
           {{ skill.name }}
         </span>
       </a>
     </div>
 
+    <div class="hobbies-container">
+      <span class="subheadline">Hobbies</span>
+      <a v-for="(hobby, index) in person.hobbies" :key="index"
+        class="hobby-item"
+        :href="hobby.url">
+        <i v-if="hobby.iconClass" :class="'hobby-icon' + hobby.iconClass"></i>
+        <i v-if="hobby.materialIcon" class="hobby-icon material-icon"> {{ hobby.materialIcon }} </i>
+        <span class="block-marged txt-full-white">
+          {{ hobby.name }}
+        </span>
+      </a>
+    </div>
   </div>
 </template>
 
