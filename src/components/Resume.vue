@@ -194,4 +194,31 @@ export default Vue.component(name, importData());
   opacity: 100%;  
 }
 
+.left-column-bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 25% 25%;
+  
+    opacity: .4; // up this value to contrast the cover image
+
+  height: 100%;
+  width: 35%;
+  padding: 30px;
+  padding-top: 45px;
+
+  display: block;
+  overflow: hidden;
+  position: relative;
+  top: 0;
+  z-index: 1;
+}
+
+.right-column {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+
+  height: 100%;
+  width: 65%;
+}
 </style>
