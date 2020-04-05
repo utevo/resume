@@ -161,10 +161,10 @@ export default Vue.component(name, importData());
 
 
 <style>
-/* Add new fonts here */
 @import "../../node_modules/font-awesome/css/font-awesome.css";
 @import "../../node_modules/material-design-icons/iconfont/material-icons.css";
 @import "../../node_modules/devicons/css/devicons.css";
+@import "../../node_modules/roboto-fontface/css/roboto/roboto-fontface.css";
 
 h3 {
   margin: 40px 0 0;
