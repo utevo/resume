@@ -121,6 +121,24 @@
           </a>
         </div>
       </div>
+
+      <div class="section contributions-section">
+        <div class="section-headline">
+          <i class="fa fa-heart small-icons"></i>
+          <span>Contributions</span>
+        </div>
+        <div class="section-content">
+          <a v-for="(contribution, index) of person.contributions"
+            :key="index"
+            class="section-item"
+            :href="contribution.url">
+            <span class="section-item-header"> {{ contribution.name }} </span>
+            <span class="section-item-subheader"> {{ contribution.skills }} </span>
+            <span class="section-item-text"> {{ contribution.description }} </span>
+            <span class="section-item-text-light"> {{ contribution.url }} </span>
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </template>
