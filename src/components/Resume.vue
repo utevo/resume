@@ -20,17 +20,17 @@
 
       <div class="contact-container">
         <a v-if="person.contact.email" :href="contactLinks.email" class="external-link">
-          <i class="contact-icon material-icons">mail</i>
+          <i class="container-icon contact-icon material-icons">mail</i>
           <span class="block-marged txt-full-white">{{ person.contact.email }}</span>
         </a>
 
         <a v-if="person.contact.phone" :href="contactLinks.phone" class="external-link">
-          <i class="contact-icon material-icon">mail</i>
+          <i class="container-icon contact-icon material-icon">mail</i>
           <span class="block-marged txt-full-white">{{ person.contact.phone }}</span>
         </a>
 
         <a v-if="person.contact.github" :href="contactLinks.github" class="external-link">
-          <i class="contact-icon fa fa-github"></i>
+          <i class="container-icon contact-icon fa fa-github"></i>
           <span class="block-marged txt-full-white">{{ person.contact.github }}</span>
         </a>
       </div>
@@ -43,8 +43,8 @@
           class="skill-item"
           :href="skill.url"
         >
-          <i v-if="skill.iconClass" :class="'skill-icon ' + skill.iconClass"></i>
-          <i v-if="skill.materialIcon" class="skill-icon material-icon">{{ skill.materialIcon }}</i>
+          <i v-if="skill.iconClass" :class="'container-icon skill-icon ' + skill.iconClass"></i>
+          <i v-if="skill.materialIcon" class="container-icon skill-icon material-icon">{{ skill.materialIcon }}</i>
           <span class="block-marged txt-full-white">{{ skill.name }}</span>
         </a>
       </div>
@@ -57,8 +57,8 @@
           class="hobby-item"
           :href="hobby.url"
         >
-          <i v-if="hobby.iconClass" :class="'hobby-icon ' + hobby.iconClass"></i>
-          <i v-if="hobby.materialIcon" class="hobby-icon material-icon">{{ hobby.materialIcon }}</i>
+          <i v-if="hobby.iconClass" :class="'container-icon hobby-icon ' + hobby.iconClass"></i>
+          <i v-if="hobby.materialIcon" class="container-icon hobby-icon material-icon">{{ hobby.materialIcon }}</i>
           <span class="block-marged txt-full-white">{{ hobby.name }}</span>
         </a>
       </div>
@@ -69,7 +69,7 @@
     <div class="right-column">
       <div class="section experience-section">
         <div class="section-headline">
-          <i class="material-icons small-icon">work</i>
+          <i class="section-icon material-icons">work</i>
           <span>Work</span>
         </div>
         <div class="section-content">
@@ -89,7 +89,7 @@
 
       <div class="section education-section">
         <div class="section-headline">
-          <i class="material-icons small-icon">school</i>
+          <i class="section-icon material-icons">school</i>
           <span>Education</span>
         </div>
         <div class="section-content">
@@ -110,7 +110,7 @@
 
       <div class="section projects-section">
         <div class="section-headline">
-          <i class="material-icons small-icon">code</i>
+          <i class="section-icon material-icons">code</i>
           <span>Projects</span>
         </div>
         <div class="section-content">
@@ -130,7 +130,7 @@
 
       <div class="section contributions-section">
         <div class="section-headline">
-          <i class="fa fa-heart small-icons"></i>
+          <i class="section-icon fa fa-heart"></i>
           <span>Contributions</span>
         </div>
         <div class="section-content">
@@ -188,6 +188,13 @@ a {
   color: @main-color;
   position: relative;
 }
+
+.section-icon {
+  top: 2.5px;
+  font-size: 1.4em;
+}
+
+
 
 .resume {
   display: flex;
