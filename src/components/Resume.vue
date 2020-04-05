@@ -49,6 +49,19 @@
       </a>
     </div>
 
+    <div class="skills-container">
+      <span class="subheadline">Skills</span>
+      <a v-for="(skill, index) in person.skills" :key="index"
+        class="skill-item"
+        :href="skill.url">
+        <i v-if="skill.iconClass" :class="'skill-icon' + skill.iconClass"></i>
+        <i v-if="skill.materialIcon" class="skill-icon material-icon">skill.materialIcon</i>
+        <span class="block-marged txt-full-white">
+          {{ skill.name }}
+        </span>
+      </a>
+    </div>
+
   </div>
 </template>
 
