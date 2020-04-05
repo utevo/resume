@@ -97,7 +97,12 @@ export default Vue.component(name, importData());
 </script>
 
 
-<style scoped>
+<style>
+/* Add new fonts here */
+@import '../../node_modules/font-awesome/css/font-awesome.css';
+@import '../../node_modules/material-design-icons/iconfont/material-icons.css';
+@import '../../node_modules/devicons/css/devicons.css';
+
 h3 {
   margin: 40px 0 0;
 }
