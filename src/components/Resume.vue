@@ -160,24 +160,38 @@ export default Vue.component(name, importData());
 </script>
 
 
-<style>
+<style lang="less">
 @import "../../node_modules/font-awesome/css/font-awesome.css";
 @import "../../node_modules/material-design-icons/iconfont/material-icons.css";
 @import "../../node_modules/devicons/css/devicons.css";
 @import "../../node_modules/roboto-fontface/css/roboto/roboto-fontface.css";
 
-h3 {
-  margin: 40px 0 0;
+@main-color: #A800FA;
+
+.resume {
+  display: flex;
+  position: relative;
+
+  font-family: 'Roboto' !important;
+  font-size: 0.9em;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+
+.left-column {
+  display: block;
+  position: absolute;
+
+  width: 30%;
+  height: 100%;
+  padding: 30px;
+  padding-top: 45px;
+  text-align: left;
+
+  color:rgba(255,255,255,0.59);
+  background-color: @main-color;
+  overflow: hiden;
+  z-index: 2;
+
+  opacity: 100%;  
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+
 </style>
