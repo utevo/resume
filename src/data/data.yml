@@ -3,21 +3,33 @@ name:
   first: Michał
   middle:
   last: Kowieski
+
+position: Software Developer
+
+
 about: Hi, my name is John Doe. I"m just about the most boring type of person you could
        possibly imagine. I like collecting leaves from the tree in my back yard and documenting
        each time I eat a peanut that is non-uniform. I am not a robot. Please hire me.
-position: Software Developer
+
+
+contact:
+  email: michael.kowieski@gmail.com
+  phone: 720 798 271
+  city: Warsaw
+  country: Poland
+  github: utevo
+
 
 birth:
   year: 1998
   location: Warsaw
+
 
 experience:
 - company: CodiLime
   position: Software Developer
   timeperiod: December 2019 - Current
   description: New features development and maintenance of SDN related product.
-
 
 - company: Accenture
   position: Intern in IT area
@@ -30,6 +42,7 @@ education:
   timeperiod: October 2017 - Current
   specialization: Computer Information System Engineering
   gpa: 3.54
+
 
 # skill level goes 0 to 100
 skills:
@@ -58,8 +71,10 @@ skills:
   level: 100
   iconClass: devicons devicons-travis
   
+
 knowledge: Also proficient in Adobe Photoshop and Illustrator, grew up bilingual
   (English and Klingon).
+
 
 projects:
 - name: eCookbook
@@ -77,6 +92,7 @@ projects:
   description: 📇 Rolodex as Single Page Application written in React.
   url: https://github.com/utevo/Rolodex
 
+  
 hobbies:
 - name: Travels
   materialIcon: explore
@@ -93,12 +109,7 @@ contributions:
   description: 🔌 The plugin integrates Tungsten Fabric with OpenStack.
   url: https://review.opendev.org/#/q/project:x/networking-opencontrail
 
-contact:
-  email: michael.kowieski@gmail.com
-  phone: 720 798 271
-  city: Warsaw
-  country: Poland
-  github: utevo
+
 # en, de, fr, pt, ca, cn, it, es, th, pt-br, ru, sv, id, hu, pl, ja, ka, nl, he, zh-tw, lt, ko, el, nb-no
 lang: en
 `
