@@ -25,7 +25,7 @@
         </a>
 
         <a v-if="person.contact.phone" :href="contactLinks.phone" class="external-link">
-          <i class="container-icon contact-icon material-icon">mail</i>
+          <i class="container-icon contact-icon material-icons">phone</i>
           <span class="block-marged txt-full-white">{{ person.contact.phone }}</span>
         </a>
 
@@ -44,7 +44,7 @@
           :href="skill.url"
         >
           <i v-if="skill.iconClass" :class="'container-icon skill-icon ' + skill.iconClass"></i>
-          <i v-if="skill.materialIcon" class="container-icon skill-icon material-icon">{{ skill.materialIcon }}</i>
+          <i v-if="skill.materialIcon" class="container-icon skill-icon material-icons">{{ skill.materialIcon }}</i>
           <span class="block-marged txt-full-white">{{ skill.name }}</span>
         </a>
       </div>
@@ -58,7 +58,7 @@
           :href="hobby.url"
         >
           <i v-if="hobby.iconClass" :class="'container-icon hobby-icon ' + hobby.iconClass"></i>
-          <i v-if="hobby.materialIcon" class="container-icon hobby-icon material-icon">{{ hobby.materialIcon }}</i>
+          <i v-if="hobby.materialIcon" class="container-icon hobby-icon material-icons">{{ hobby.materialIcon }}</i>
           <span class="block-marged txt-full-white">{{ hobby.name }}</span>
         </a>
       </div>
@@ -194,7 +194,14 @@ a {
   font-size: 1.4em;
 }
 
+.container-icon {
+  color: white;
+  font-size: 1.5em;
+  margin-right: 10px;
 
+  top: 2px;
+  position: relative;
+}
 
 .resume {
   display: flex;
