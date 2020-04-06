@@ -10,7 +10,8 @@
         <p>
           <span class="txt-full-white">{{ person.position }}</span>
           <br />
-          <span>{{ person.contact.city }}</span>, <span class="uppercase">{{ person.contact.country }}</span>
+          <span>{{ person.contact.city }}</span>,
+          <span class="uppercase">{{ person.contact.country }}</span>
         </p>
       </div>
 
@@ -18,49 +19,71 @@
 
       <div class="txt-multiline">{{ person.knowledge }}</div>
 
-      <div class="contact-container">
-        <a v-if="person.contact.email" :href="contactLinks.email" class="container-item external-link">
+      <div class="container container-content contact-container">
+        <a
+          v-if="person.contact.email"
+          :href="contactLinks.email"
+          class="container-item external-link"
+        >
           <i class="container-icon contact-icon material-icons">mail</i>
-          <span class="icon-label block-marged txt-full-white">{{ person.contact.email }}</span>
+          <span class="icon-label txt-full-white">{{ person.contact.email }}</span>
         </a>
 
-        <a v-if="person.contact.phone" :href="contactLinks.phone" class="container-item external-link">
+        <a
+          v-if="person.contact.phone"
+          :href="contactLinks.phone"
+          class="container-item external-link"
+        >
           <i class="container-icon contact-icon material-icons">phone</i>
-          <span class="icon-label block-marged txt-full-white">{{ person.contact.phone }}</span>
+          <span class="icon-label txt-full-white">{{ person.contact.phone }}</span>
         </a>
 
-        <a v-if="person.contact.github" :href="contactLinks.github" class="container-item external-link">
+        <a
+          v-if="person.contact.github"
+          :href="contactLinks.github"
+          class="container-item external-link"
+        >
           <i class="container-icon contact-icon fa fa-github"></i>
-          <span class="icon-label block-marged txt-full-white">{{ person.contact.github }}</span>
+          <span class="icon-label txt-full-white">{{ person.contact.github }}</span>
         </a>
       </div>
 
-      <div class="skills-container">
+      <div class="container skills-container">
         <span class="subheadline">Skills</span>
-        <a
-          v-for="(skill, index) in person.skills"
-          :key="index"
-          class="container-item skill-item"
-          :href="skill.url"
-        >
-          <i v-if="skill.iconClass" :class="'container-icon skill-icon ' + skill.iconClass"></i>
-          <i v-if="skill.materialIcon" class="container-icon skill-icon material-icons">{{ skill.materialIcon }}</i>
-          <span class="icon-label block-marged">{{ skill.name }}</span>
-        </a>
+        <div class="container-content skills-content">
+          <a
+            v-for="(skill, index) in person.skills"
+            :key="index"
+            class="container-item tem"
+            :href="skill.url"
+          >
+            <i v-if="skill.iconClass" :class="'container-icon skill-icon ' + skill.iconClass"></i>
+            <i
+              v-if="skill.materialIcon"
+              class="container-icon skill-icon material-icons"
+            >{{ skill.materialIcon }}</i>
+            <span class="icon-label">{{ skill.name }}</span>
+          </a>
+        </div>
       </div>
 
-      <div class="hobbies-container">
+      <div class="container hobbies-container">
         <span class="subheadline">Hobbies</span>
-        <a
-          v-for="(hobby, index) in person.hobbies"
-          :key="index"
-          class="container-item hobby-item"
-          :href="hobby.url"
-        >
-          <i v-if="hobby.iconClass" :class="'container-icon hobby-icon ' + hobby.iconClass"></i>
-          <i v-if="hobby.materialIcon" class="container-icon hobby-icon material-icons">{{ hobby.materialIcon }}</i>
-          <span class="icon-label block-marged">{{ hobby.name }}</span>
-        </a>
+        <div class="container-content hobbies-content">
+          <a
+            v-for="(hobby, index) in person.hobbies"
+            :key="index"
+            class="container-item hobby-item"
+            :href="hobby.url"
+          >
+            <i v-if="hobby.iconClass" :class="'container-icon hobby-icon ' + hobby.iconClass"></i>
+            <i
+              v-if="hobby.materialIcon"
+              class="container-icon hobby-icon material-icons"
+            >{{ hobby.materialIcon }}</i>
+            <span class="icon-label">{{ hobby.name }}</span>
+          </a>
+        </div>
       </div>
     </div>
 
@@ -166,8 +189,7 @@ export default Vue.component(name, importData());
 @import "../../node_modules/devicons/css/devicons.css";
 @import "../../node_modules/roboto-fontface/css/roboto/roboto-fontface.css";
 
-@main-color: #A800FA;
-
+@main-color: #a800fa;
 
 a {
   color: inherit;
@@ -177,7 +199,7 @@ a {
   &:visited {
     color: inherit;
   }
-};
+}
 
 .material-icons {
   color: @main-color;
@@ -199,15 +221,19 @@ a {
   font-size: 1.5em;
   margin-right: 10px;
 
-  top: 2px;
+  top: 2.5px;
   position: relative;
+}
+
+.skill-icon {
+  font-size: 1.8em;
 }
 
 .resume {
   display: flex;
   position: relative;
 
-  font-family: 'Roboto' !important;
+  font-family: "Roboto" !important;
   font-size: 0.9em;
 }
 
@@ -221,20 +247,20 @@ a {
   padding-top: 45px;
   text-align: left;
 
-  color:rgba(255,255,255,0.59);
+  color: rgba(255, 255, 255, 0.59);
   background-color: @main-color;
   overflow: hidden;
   z-index: 2;
 
-  opacity: 100%;  
+  opacity: 100%;
 }
 
 .left-column-bg {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 25% 25%;
-  
-    opacity: .4; // up this value to contrast the cover image
+
+  opacity: 0.4; // up this value to contrast the cover image
 
   height: 100%;
   width: 35%;
@@ -272,9 +298,32 @@ a {
   margin-bottom: 20px;
 }
 
-.contact-container {
+
+.container {
   margin-top: 30px;
   margin-bottom: 30px;
+}
+
+.container-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-item {
+  display: grid;
+  grid-template-columns: 30px auto;
+
+  color: rgba(255, 255, 255, .6);
+
+  margin-right: 25px;
+  margin-bottom: 10px;
+
+  transition: .5s;
+
+  &:hover {
+    color: rgba(255, 255, 255, .8);
+    transition: .5s;
+  }
 }
 
 .txt-full-white {
@@ -284,6 +333,14 @@ a {
 .txt-multiline {
   margin-top: 30px;
   margin-bottom: 20px;
+}
+
+.subheadline {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.2em;
+
+  display: block;
+  margin-bottom: 10px;
 }
 
 .headline-name {
@@ -301,6 +358,11 @@ a {
   position: relative;
 }
 
+.section {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 .section-headline {
   color: @main-color;
   display: inline-block;
@@ -315,24 +377,27 @@ a {
 
 .section-item {
   display: block;
-  margin-bottom: 10px
+  margin-bottom: 10px;
 }
 
 .section-item-header {
   display: block;
+  line-height: 1.5em;
 
   font-size: 1.1em;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .section-item-subheader {
   display: block;
+  line-height: 1.5em;
 
   font-weight: 400;
 }
 
 .section-item-text {
   display: block;
+  line-height: 1.5em;
 
   font-weight: 300;
 }
