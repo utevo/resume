@@ -307,4 +307,40 @@ a {
   font-size: 1.3em;
   margin-left: 5px;
 }
+
+.section-content {
+  margin-top: 10px;
+  padding-left: 32px;
+}
+
+.section-item {
+  display: block;
+  margin-bottom: 10px
+}
+
+.section-item-header {
+  display: block;
+
+  font-size: 1.1em;
+  font-weight: 400;
+}
+
+.section-item-subheader {
+  display: block;
+
+  font-weight: 400;
+}
+
+.section-item-text {
+  display: block;
+
+  font-weight: 300;
+}
+
+.section-item-text-light {
+  display: block;
+  color: rgb(0, 0, 0, 0.42);
+
+  font-weight: 300;
+}
 </style>
