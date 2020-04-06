@@ -218,7 +218,7 @@ a {
 
 .container-icon {
   color: white;
-  font-size: 1.5em;
+  font-size: 1.3em;
   margin-right: 10px;
 
   top: 2.5px;
@@ -227,6 +227,10 @@ a {
 
 .skill-icon {
   font-size: 1.8em;
+}
+
+.contact-icon {
+  font-size: 1.5em;
 }
 
 .resume {
