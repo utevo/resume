@@ -10,7 +10,7 @@
         <p>
           <span class="txt-full-white">{{ person.position }}</span>
           <br />
-          <span class="uppercase">{{ person.contact.city }}, {{ person.contact.country }}</span>
+          <span>{{ person.contact.city }}</span>, <span class="uppercase">{{ person.contact.country }}</span>
         </p>
       </div>
 
@@ -19,19 +19,19 @@
       <div class="txt-multiline">{{ person.knowledge }}</div>
 
       <div class="contact-container">
-        <a v-if="person.contact.email" :href="contactLinks.email" class="external-link">
+        <a v-if="person.contact.email" :href="contactLinks.email" class="container-item external-link">
           <i class="container-icon contact-icon material-icons">mail</i>
-          <span class="block-marged txt-full-white">{{ person.contact.email }}</span>
+          <span class="icon-label block-marged txt-full-white">{{ person.contact.email }}</span>
         </a>
 
-        <a v-if="person.contact.phone" :href="contactLinks.phone" class="external-link">
+        <a v-if="person.contact.phone" :href="contactLinks.phone" class="container-item external-link">
           <i class="container-icon contact-icon material-icons">phone</i>
-          <span class="block-marged txt-full-white">{{ person.contact.phone }}</span>
+          <span class="icon-label block-marged txt-full-white">{{ person.contact.phone }}</span>
         </a>
 
-        <a v-if="person.contact.github" :href="contactLinks.github" class="external-link">
+        <a v-if="person.contact.github" :href="contactLinks.github" class="container-item external-link">
           <i class="container-icon contact-icon fa fa-github"></i>
-          <span class="block-marged txt-full-white">{{ person.contact.github }}</span>
+          <span class="icon-label block-marged txt-full-white">{{ person.contact.github }}</span>
         </a>
       </div>
 
@@ -40,12 +40,12 @@
         <a
           v-for="(skill, index) in person.skills"
           :key="index"
-          class="skill-item"
+          class="container-item skill-item"
           :href="skill.url"
         >
           <i v-if="skill.iconClass" :class="'container-icon skill-icon ' + skill.iconClass"></i>
           <i v-if="skill.materialIcon" class="container-icon skill-icon material-icons">{{ skill.materialIcon }}</i>
-          <span class="block-marged">{{ skill.name }}</span>
+          <span class="icon-label block-marged">{{ skill.name }}</span>
         </a>
       </div>
 
@@ -54,12 +54,12 @@
         <a
           v-for="(hobby, index) in person.hobbies"
           :key="index"
-          class="hobby-item"
+          class="container-item hobby-item"
           :href="hobby.url"
         >
           <i v-if="hobby.iconClass" :class="'container-icon hobby-icon ' + hobby.iconClass"></i>
           <i v-if="hobby.materialIcon" class="container-icon hobby-icon material-icons">{{ hobby.materialIcon }}</i>
-          <span class="block-marged">{{ hobby.name }}</span>
+          <span class="icon-label block-marged">{{ hobby.name }}</span>
         </a>
       </div>
     </div>
@@ -216,7 +216,7 @@ a {
   position: absolute;
 
   width: 30%;
-  height: 100%;
+  height: 200%;
   padding: 30px;
   padding-top: 45px;
   text-align: left;
@@ -281,7 +281,12 @@ a {
   color: white;
 }
 
-.headline {
+.txt-multiline {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.headline-name {
   color: white;
   font-size: 1.3em;
   font-weight: bold;
@@ -289,5 +294,17 @@ a {
 
 .uppercase {
   text-transform: uppercase;
+}
+
+.icon-label {
+  top: 2.5px;
+  position: relative;
+}
+
+.section-headline {
+  color: @main-color;
+  display: inline-block;
+  font-size: 1.3em;
+  margin-left: 5px;
 }
 </style>
