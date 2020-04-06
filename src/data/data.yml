@@ -29,11 +29,13 @@ birth:
 experiences:
 - company: CodiLime
   position: Software Developer
+  skills: Python | Go
   timeperiod: December 2019 - Current
   description: New features development and maintenance of SDN related product.
 
 - company: Accenture
   position: Intern in IT area
+  skills: Java | Python
   timeperiod: July 2019 - October 2019
   description: Programming works in projects implemented for the needs of the telecommunications sector.
 
@@ -56,13 +58,16 @@ skills:
   iconClass: devicons devicons-django
 - name: JavaScript
   level: 100
-  iconClass: devicons devicons-javascript_badge
+  iconClass: devicons devicons-javascript
 - name: React
   level: 100
   iconClass: devicons devicons-react
 - name: Go
   level: 100
   iconClass: devicons devicons-go
+- name: Git
+  level: 100
+  iconClass: devicons devicons-git
 - name: Docker
   level: 100
   iconClass: devicons devicons-docker
@@ -104,6 +109,7 @@ hobbies:
 
 contributions:
 - name: networking-opencontrail
+  skills: Python | REST | OpenStack | Ansible
   description: 🔌 The plugin integrates Tungsten Fabric with OpenStack.
   url: https://review.opendev.org/#/q/project:x/networking-opencontrail
 
