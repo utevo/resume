@@ -95,7 +95,7 @@
           <div class="section experience-section">
             <div class="section-headline">
               <i class="section-icon material-icons">work</i>
-              <span>Work</span>
+              <span class="section-title">Experience</span>
             </div>
             <div class="section-content">
               <a
@@ -105,7 +105,8 @@
                 :href="experience.website"
               >
                 <span class="section-item-header">{{ experience.position }}</span>
-                <span class="section-item-subheader">{{ experience.company }}</span>
+                <span class="section-item-subheader">{{ experience.skills }}</span>
+                <span class="section-item-subheader-light">{{ experience.company }}</span>
                 <span class="section-item-text">{{ experience.timeperiod }}</span>
                 <span class="section-item-text-light">{{ experience.description }}</span>
               </a>
@@ -115,7 +116,7 @@
           <div class="section education-section">
             <div class="section-headline">
               <i class="section-icon material-icons">school</i>
-              <span>Education</span>
+              <span class="section-title">Education</span>
             </div>
             <div class="section-content">
               <a
@@ -136,7 +137,7 @@
           <div class="section projects-section">
             <div class="section-headline">
               <i class="section-icon material-icons">code</i>
-              <span>Projects</span>
+              <span class="section-title">Projects</span>
             </div>
             <div class="section-content">
               <a
@@ -147,7 +148,10 @@
               >
                 <span class="section-item-header">{{ project.name }}</span>
                 <span class="section-item-subheader">{{ project.skills }}</span>
-                <span class="section-item-text">{{ project.description }}</span>
+                <span class="section-item-text">
+                  <i class="emoji">{{ project.emoji }}</i>
+                  {{ project.description }}
+                </span>
                 <span class="section-item-text-light">{{ project.url }}</span>
               </a>
             </div>
@@ -156,7 +160,7 @@
           <div class="section contributions-section">
             <div class="section-headline">
               <i class="section-icon fa fa-heart"></i>
-              <span>Contributions</span>
+              <span class="section-title">Contributions</span>
             </div>
             <div class="section-content">
               <a
@@ -394,6 +398,9 @@ a {
   color: @main-color;
   display: inline-block;
   font-size: 1.3em;
+}
+
+.section-title {
   margin-left: 5px;
 }
 
@@ -409,7 +416,7 @@ a {
 
 .section-item-header {
   display: block;
-  line-height: 1.5em;
+  line-height: 1.7em;
 
   font-size: 1.1em;
   font-weight: 500;
@@ -417,9 +424,16 @@ a {
 
 .section-item-subheader {
   display: block;
-  line-height: 1.5em;
+  line-height: 1.6em;
 
   font-weight: 400;
+}
+
+.section-item-subheader-light {
+  display: block;
+  line-height: 1.5em;
+
+  font-weight: 350;
 }
 
 .section-item-text {
@@ -435,5 +449,12 @@ a {
 
   font-size: 14px;
   font-weight: 300;
+}
+
+.emoji {
+  font-style: normal;
+  font-size: 1.2em;
+  font-family: "Noto Color Emoji";
+  src: url(https://gitcdn.xyz/repo/googlefonts/noto-emoji/master/fonts/NotoColorEmoji.ttf);
 }
 </style>
