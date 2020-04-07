@@ -65,6 +65,9 @@ skills:
 - name: Go
   level: 100
   iconClass: devicons devicons-go
+- name: Linux
+  level: 100
+  iconClass: devicons devicons-linux
 - name: Git
   level: 100
   iconClass: devicons devicons-git
@@ -82,18 +85,27 @@ skills:
 projects:
 - name: eCookbook
   skills: Python | Django | React | Docker | Travis CI
-  description: 🍳 An interactive cookbook powered by Django and React.
+  emoji: 🍳
+  description: An interactive cookbook powered by Django and React.
   url: https://github.com/utevo/eCookbook
 
 - name: gRPC-Chat
   skills: Go | gRPC
-  description: 💬 A chat server/client application implemented using gRPC.
+  emoji: 💬
+  description: A chat server/client application implemented using gRPC.
   url: https://github.com/utevo/gRPC-Chat
 
 - name: Rolodex
   skills: React
-  description: 📇 Rolodex as Single Page Application written in React.
+  emoji: 📇
+  description: Rolodex as Single Page Application written in React.
   url: https://github.com/utevo/Rolodex
+
+- name: Hashtable-analysis
+  skills: Python | Pandas | Click | Sphinx | Pytest
+  emoji:  "#️⃣"
+  description: Hashtable implementation and analysis. 
+  url: https://github.com/utevo/Hashtable-analysis
 
   
 hobbies:
