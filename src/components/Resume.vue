@@ -1,173 +1,177 @@
 <template>
-  <div class="resume">
-    <div class="left-column">
-      <div class="headline">
-        <div class="headline-name">
-          <span>{{ person.name.first }} {{ person.name.middle }}</span>
-          <span class="uppercase">{{ person.name.last }}</span>
+  <div class="background">
+    <div class="page">
+      <div class="resume">
+        <div class="left-column">
+          <div class="headline">
+            <div class="headline-name">
+              <span>{{ person.name.first }} {{ person.name.middle }}</span>
+              <span class="uppercase">{{ person.name.last }}</span>
+            </div>
+
+            <p>
+              <span class="txt-full-white">{{ person.position }}</span>
+              <br />
+              <span>{{ person.contact.city }}</span>,
+              <span class="uppercase">{{ person.contact.country }}</span>
+            </p>
+          </div>
+
+          <div class="txt-multiline">{{ person.about }}</div>
+
+          <div class="txt-multiline">{{ person.knowledge }}</div>
+
+          <div class="container container-content contact-container">
+            <a
+              v-if="person.contact.email"
+              :href="contactLinks.email"
+              class="container-item external-link"
+            >
+              <i class="container-icon contact-icon material-icons">mail</i>
+              <span class="icon-label txt-full-white">{{ person.contact.email }}</span>
+            </a>
+
+            <a
+              v-if="person.contact.phone"
+              :href="contactLinks.phone"
+              class="container-item external-link"
+            >
+              <i class="container-icon contact-icon material-icons">phone</i>
+              <span class="icon-label txt-full-white">{{ person.contact.phone }}</span>
+            </a>
+
+            <a
+              v-if="person.contact.github"
+              :href="contactLinks.github"
+              class="container-item external-link"
+            >
+              <i class="container-icon contact-icon fa fa-github"></i>
+              <span class="icon-label txt-full-white">{{ person.contact.github }}</span>
+            </a>
+          </div>
+
+          <div class="container skills-container">
+            <span class="subheadline">Skills</span>
+            <div class="container-content skills-content">
+              <a
+                v-for="(skill, index) in person.skills"
+                :key="index"
+                class="container-item tem"
+                :href="skill.url"
+              >
+                <i v-if="skill.iconClass" :class="'container-icon skill-icon ' + skill.iconClass"></i>
+                <i
+                  v-if="skill.materialIcon"
+                  class="container-icon skill-icon material-icons"
+                >{{ skill.materialIcon }}</i>
+                <span class="icon-label">{{ skill.name }}</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="container hobbies-container">
+            <span class="subheadline">Hobbies</span>
+            <div class="container-content hobbies-content">
+              <a
+                v-for="(hobby, index) in person.hobbies"
+                :key="index"
+                class="container-item hobby-item"
+                :href="hobby.url"
+              >
+                <i v-if="hobby.iconClass" :class="'container-icon hobby-icon ' + hobby.iconClass"></i>
+                <i
+                  v-if="hobby.materialIcon"
+                  class="container-icon hobby-icon material-icons"
+                >{{ hobby.materialIcon }}</i>
+                <span class="icon-label">{{ hobby.name }}</span>
+              </a>
+            </div>
+          </div>
         </div>
 
-        <p>
-          <span class="txt-full-white">{{ person.position }}</span>
-          <br />
-          <span>{{ person.contact.city }}</span>,
-          <span class="uppercase">{{ person.contact.country }}</span>
-        </p>
-      </div>
+        <div class="left-column-bg"></div>
 
-      <div class="txt-multiline">{{ person.about }}</div>
+        <div class="right-column">
+          <div class="section experience-section">
+            <div class="section-headline">
+              <i class="section-icon material-icons">work</i>
+              <span>Work</span>
+            </div>
+            <div class="section-content">
+              <a
+                v-for="(experience, index) of person.experiences"
+                :key="index"
+                class="section-item"
+                :href="experience.website"
+              >
+                <span class="section-item-header">{{ experience.position }}</span>
+                <span class="section-item-subheader">{{ experience.company }}</span>
+                <span class="section-item-text">{{ experience.timeperiod }}</span>
+                <span class="section-item-text-light">{{ experience.description }}</span>
+              </a>
+            </div>
+          </div>
 
-      <div class="txt-multiline">{{ person.knowledge }}</div>
+          <div class="section education-section">
+            <div class="section-headline">
+              <i class="section-icon material-icons">school</i>
+              <span>Education</span>
+            </div>
+            <div class="section-content">
+              <a
+                v-for="(education, index) of person.educations"
+                :key="index"
+                class="section-item"
+                :href="education.website"
+              >
+                <span class="section-item-header">{{ education.degree }}</span>
+                <span class="section-item-subheader">{{ education.school }}</span>
+                <span class="section-item-text">{{ education.timeperiod }}</span>
+                <span class="section-item-text-light">Specialization: {{ education.specialization }}</span>
+                <span class="section-item-text-light">GPA: {{ education.gpa }}</span>
+              </a>
+            </div>
+          </div>
 
-      <div class="container container-content contact-container">
-        <a
-          v-if="person.contact.email"
-          :href="contactLinks.email"
-          class="container-item external-link"
-        >
-          <i class="container-icon contact-icon material-icons">mail</i>
-          <span class="icon-label txt-full-white">{{ person.contact.email }}</span>
-        </a>
+          <div class="section projects-section">
+            <div class="section-headline">
+              <i class="section-icon material-icons">code</i>
+              <span>Projects</span>
+            </div>
+            <div class="section-content">
+              <a
+                v-for="(project, index) of person.projects"
+                :key="index"
+                class="section-item"
+                :href="project.website"
+              >
+                <span class="section-item-header">{{ project.name }}</span>
+                <span class="section-item-subheader">{{ project.skills }}</span>
+                <span class="section-item-text">{{ project.description }}</span>
+                <span class="section-item-text-light">{{ project.url }}</span>
+              </a>
+            </div>
+          </div>
 
-        <a
-          v-if="person.contact.phone"
-          :href="contactLinks.phone"
-          class="container-item external-link"
-        >
-          <i class="container-icon contact-icon material-icons">phone</i>
-          <span class="icon-label txt-full-white">{{ person.contact.phone }}</span>
-        </a>
-
-        <a
-          v-if="person.contact.github"
-          :href="contactLinks.github"
-          class="container-item external-link"
-        >
-          <i class="container-icon contact-icon fa fa-github"></i>
-          <span class="icon-label txt-full-white">{{ person.contact.github }}</span>
-        </a>
-      </div>
-
-      <div class="container skills-container">
-        <span class="subheadline">Skills</span>
-        <div class="container-content skills-content">
-          <a
-            v-for="(skill, index) in person.skills"
-            :key="index"
-            class="container-item tem"
-            :href="skill.url"
-          >
-            <i v-if="skill.iconClass" :class="'container-icon skill-icon ' + skill.iconClass"></i>
-            <i
-              v-if="skill.materialIcon"
-              class="container-icon skill-icon material-icons"
-            >{{ skill.materialIcon }}</i>
-            <span class="icon-label">{{ skill.name }}</span>
-          </a>
-        </div>
-      </div>
-
-      <div class="container hobbies-container">
-        <span class="subheadline">Hobbies</span>
-        <div class="container-content hobbies-content">
-          <a
-            v-for="(hobby, index) in person.hobbies"
-            :key="index"
-            class="container-item hobby-item"
-            :href="hobby.url"
-          >
-            <i v-if="hobby.iconClass" :class="'container-icon hobby-icon ' + hobby.iconClass"></i>
-            <i
-              v-if="hobby.materialIcon"
-              class="container-icon hobby-icon material-icons"
-            >{{ hobby.materialIcon }}</i>
-            <span class="icon-label">{{ hobby.name }}</span>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <div class="left-column-bg"></div>
-
-    <div class="right-column">
-      <div class="section experience-section">
-        <div class="section-headline">
-          <i class="section-icon material-icons">work</i>
-          <span>Work</span>
-        </div>
-        <div class="section-content">
-          <a
-            v-for="(experience, index) of person.experiences"
-            :key="index"
-            class="section-item"
-            :href="experience.website"
-          >
-            <span class="section-item-header">{{ experience.position }}</span>
-            <span class="section-item-subheader">{{ experience.company }}</span>
-            <span class="section-item-text">{{ experience.timeperoid }}</span>
-            <span class="section-item-text-light">{{ experience.description }}</span>
-          </a>
-        </div>
-      </div>
-
-      <div class="section education-section">
-        <div class="section-headline">
-          <i class="section-icon material-icons">school</i>
-          <span>Education</span>
-        </div>
-        <div class="section-content">
-          <a
-            v-for="(education, index) of person.educations"
-            :key="index"
-            class="section-item"
-            :href="education.website"
-          >
-            <span class="section-item-header">{{ education.degree }}</span>
-            <span class="section-item-subheader">{{ education.school }}</span>
-            <span class="section-item-text">{{ education.timeperoid }}</span>
-            <span class="section-item-text-light">Specialization: {{ education.specialization }}</span>
-            <span class="section-item-text-light">GPA: {{ education.gpa }}</span>
-          </a>
-        </div>
-      </div>
-
-      <div class="section projects-section">
-        <div class="section-headline">
-          <i class="section-icon material-icons">code</i>
-          <span>Projects</span>
-        </div>
-        <div class="section-content">
-          <a
-            v-for="(project, index) of person.projects"
-            :key="index"
-            class="section-item"
-            :href="project.website"
-          >
-            <span class="section-item-header">{{ project.name }}</span>
-            <span class="section-item-subheader">{{ project.skills }}</span>
-            <span class="section-item-text">{{ project.description }}</span>
-            <span class="section-item-text-light">{{ project.url }}</span>
-          </a>
-        </div>
-      </div>
-
-      <div class="section contributions-section">
-        <div class="section-headline">
-          <i class="section-icon fa fa-heart"></i>
-          <span>Contributions</span>
-        </div>
-        <div class="section-content">
-          <a
-            v-for="(contribution, index) of person.contributions"
-            :key="index"
-            class="section-item"
-            :href="contribution.url"
-          >
-            <span class="section-item-header">{{ contribution.name }}</span>
-            <span class="section-item-subheader">{{ contribution.skills }}</span>
-            <span class="section-item-text">{{ contribution.description }}</span>
-            <span class="section-item-text-light">{{ contribution.url }}</span>
-          </a>
+          <div class="section contributions-section">
+            <div class="section-headline">
+              <i class="section-icon fa fa-heart"></i>
+              <span>Contributions</span>
+            </div>
+            <div class="section-content">
+              <a
+                v-for="(contribution, index) of person.contributions"
+                :key="index"
+                class="section-item"
+                :href="contribution.url"
+              >
+                <span class="section-item-header">{{ contribution.name }}</span>
+                <span class="section-item-subheader">{{ contribution.skills }}</span>
+                <span class="section-item-text">{{ contribution.description }}</span>
+                <span class="section-item-text-light">{{ contribution.url }}</span>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -199,6 +203,25 @@ a {
   &:visited {
     color: inherit;
   }
+}
+
+.background {
+  overflow-x: hidden;
+  background: #cccccc;
+  margin: 0;
+  padding: 0;
+  -webkit-print-color-adjust: exact;
+  box-sizing: border-box;
+}
+
+.page {
+  background: white;
+  position: relative;
+  width: 21cm;
+  height: 29.68cm;
+  display: block;
+  page-break-after: auto;
+  overflow: hidden;
 }
 
 .material-icons {
@@ -246,7 +269,7 @@ a {
   position: absolute;
 
   width: 30%;
-  height: 200%;
+  height: 100%;
   padding: 30px;
   padding-top: 45px;
   text-align: left;
@@ -282,6 +305,7 @@ a {
   display: flex;
   flex-direction: column;
   padding: 30px;
+  background: white;
 
   height: 100%;
   width: 65%;
@@ -302,7 +326,6 @@ a {
   margin-bottom: 20px;
 }
 
-
 .container {
   margin-top: 30px;
   margin-bottom: 30px;
@@ -317,16 +340,16 @@ a {
   display: grid;
   grid-template-columns: 30px auto;
 
-  color: rgba(255, 255, 255, .6);
+  color: rgba(255, 255, 255, 0.6);
 
   margin-right: 25px;
   margin-bottom: 10px;
 
-  transition: .5s;
+  transition: 0.5s;
 
   &:hover {
-    color: rgba(255, 255, 255, .8);
-    transition: .5s;
+    color: rgba(255, 255, 255, 0.8);
+    transition: 0.5s;
   }
 }
 
@@ -408,8 +431,9 @@ a {
 
 .section-item-text-light {
   display: block;
-  color: rgb(0, 0, 0, 0.42);
+  color: rgba(0, 0, 0, 0.42);
 
+  font-size: 14px;
   font-weight: 300;
 }
 </style>
