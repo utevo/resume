@@ -87,6 +87,10 @@
               </a>
             </div>
           </div>
+
+          <footer class="clause">
+            {{ person.clause }}
+          </footer>
         </div>
 
         <div class="left-column-bg"></div>
@@ -331,8 +335,8 @@ a {
 }
 
 .container {
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .container-content {
@@ -456,5 +460,9 @@ a {
   font-size: 1.2em;
   font-family: "Noto Color Emoji";
   src: url(https://gitcdn.xyz/repo/googlefonts/noto-emoji/master/fonts/NotoColorEmoji.ttf);
+}
+
+.clause {
+  font-size: 0.7em;
 }
 </style>
