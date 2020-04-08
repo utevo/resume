@@ -390,8 +390,8 @@ a {
 }
 
 .section {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 3px;
+  margin-bottom: 3px;
 }
 
 .section-headline {
