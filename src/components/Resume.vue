@@ -88,9 +88,9 @@
             </div>
           </div>
 
-          <footer class="clause">
+          <div class="clause txt-multiline">
             {{ person.clause }}
-          </footer>
+          </div>
         </div>
 
         <div class="left-column-bg"></div>
@@ -201,7 +201,7 @@ export default Vue.component(name, importData());
 @import "../../node_modules/devicons/css/devicons.css";
 @import "../../node_modules/roboto-fontface/css/roboto/roboto-fontface.css";
 
-@main-color: #a800fa;
+@main-color: #844685;
 
 a {
   color: inherit;
@@ -312,7 +312,7 @@ a {
 .right-column {
   display: flex;
   flex-direction: column;
-  padding: 30px;
+  padding: 20px;
   background: white;
 
   height: 100%;
@@ -367,7 +367,7 @@ a {
 
 .txt-multiline {
   margin-top: 30px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .subheadline {
@@ -463,6 +463,12 @@ a {
 }
 
 .clause {
-  font-size: 0.7em;
+  position:absolute; 
+  font-size: 0.5em;
+  bottom: 30px;
+  height: 120px;
+  left: 9%;
+  right: 9%;
+  text-align: center;
 }
 </style>

@@ -77,9 +77,6 @@ skills:
 - name: PostgreSQL
   level: 100
   iconClass: devicons devicons-postgresql
-- name: Travis CI
-  level: 100
-  iconClass: devicons devicons-travis
 
 
 projects:
