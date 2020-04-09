@@ -88,9 +88,7 @@
             </div>
           </div>
 
-          <div class="clause txt-multiline">
-            {{ person.clause }}
-          </div>
+          <div class="clause txt-multiline">{{ person.clause }}</div>
         </div>
 
         <div class="left-column-bg"></div>
@@ -463,7 +461,7 @@ a {
 }
 
 .clause {
-  position:absolute; 
+  position: absolute;
   bottom: 15px;
   height: 110px;
   left: 9%;
