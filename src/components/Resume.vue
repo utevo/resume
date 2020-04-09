@@ -226,7 +226,7 @@ a {
   background: white;
   position: relative;
   width: 21cm;
-  height: 29.68cm;
+  height: 29.2cm;
   display: block;
   page-break-after: auto;
   overflow: hidden;
