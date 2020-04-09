@@ -148,7 +148,7 @@
                 v-for="(project, index) of person.projects"
                 :key="index"
                 class="section-item"
-                :href="project.website"
+                :href="project.url"
               >
                 <span class="section-item-header">{{ project.name }}</span>
                 <span class="section-item-subheader">{{ project.skills }}</span>
