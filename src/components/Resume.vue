@@ -153,7 +153,7 @@
                 <span class="section-item-header">{{ project.name }}</span>
                 <span class="section-item-subheader">{{ project.skills }}</span>
                 <span class="section-item-text">
-                  <i class="emoji">{{ project.emoji }}</i>
+                  <!-- <i class="emoji">{{ project.emoji }}</i> -->
                   {{ project.description }}
                 </span>
                 <span class="section-item-text-light">{{ project.url }}</span>
