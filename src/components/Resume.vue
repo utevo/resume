@@ -335,8 +335,8 @@ a {
 }
 
 .container {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .container-content {
@@ -464,11 +464,13 @@ a {
 
 .clause {
   position:absolute; 
-  font-size: 0.5em;
-  bottom: 30px;
-  height: 120px;
+  bottom: 15px;
+  height: 110px;
   left: 9%;
   right: 9%;
   text-align: center;
+
+  font-size: 0.5em;
+  font-weight: 200;
 }
 </style>
