@@ -19,7 +19,17 @@
 
           <div class="txt-multiline">{{ person.about }}</div>
 
-          <div class="txt-multiline">{{ person.knowledge }}</div>
+          <div v-if="person.knowledge" class="txt-multiline">{{ person.knowledge }}</div>
+
+          <div class="language-container container">
+            <div
+              v-for="(language, index) in person.languages"
+              :key="index"
+              class="language-item"
+            >
+            {{ language }}
+            </div>
+          </div>
 
           <div class="container container-content contact-container">
             <a
@@ -364,8 +374,8 @@ a {
 }
 
 .txt-multiline {
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 .subheadline {
@@ -470,5 +480,17 @@ a {
 
   font-size: 0.5em;
   font-weight: 200;
+}
+
+.language-container {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.language-item {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  
+  font-size: 1.1em;
 }
 </style>
